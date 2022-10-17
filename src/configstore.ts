@@ -23,6 +23,9 @@ export async function syncConfig(config: any, connectionString: string, strict: 
             userAgentPrefix: userAgentPrefix
         }
     };
+
+    core.info(connectionString);
+
     const client = new AppConfigurationClient(connectionString);
 
     core.info('Determining which keys to sync');
