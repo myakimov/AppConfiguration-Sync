@@ -24,7 +24,7 @@ export async function syncConfig(config: any, connectionString: string, strict: 
         }
     };
 
-    core.info(connectionString);
+    core.info("Connection String :" + connectionString);
 
     const client = new AppConfigurationClient(connectionString);
 
