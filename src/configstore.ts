@@ -23,7 +23,7 @@ export async function syncConfig(config: any, connectionString: string, strict: 
             userAgentPrefix: userAgentPrefix
         }
     };
-    const client = new AppConfigurationClient(connectionString, appConfigurationOptions);
+    const client = new AppConfigurationClient(connectionString);
 
     core.info('Determining which keys to sync');
     const settingsToAdd = getSettingsToAdd(config, label, prefix, tags, contentType);
