@@ -24,9 +24,7 @@ export async function syncConfig(config: any, connectionString: string, strict: 
         }
     };
 
-    core.info("Connection String :" + connectionString);
-
-    const client = new AppConfigurationClient(connectionString);
+    const client = new AppConfigurationClient(connectionString, appConfigurationOptions);
 
     core.info('Determining which keys to sync');
     const settingsToAdd = getSettingsToAdd(config, label, prefix, tags, contentType);
